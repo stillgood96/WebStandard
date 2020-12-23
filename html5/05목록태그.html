@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>목록태그</title>
+</head>
+
+<body>
+<h1>목록태그</h1>
+<h2>순서없는 목록</h2>
+<h4>내가 좋아하는 음식</h4>
+<ul type>
+    <li>피자</li>
+    <li>치킨</li>
+    <li>갈비찜</li>
+    <li>라면</li>
+    <li>탕수육</li>
+</ul>
+
+<ul type ="square">
+    <li>분식
+        <ul>
+            <li>라면
+                <ul>
+                    <li>신라면</li>
+                    <li>짜왕</li>
+                    <li>오징어짬뽕</li>
+                    <li>진짬뽕</li>
+                </ul>
+            </li>
+
+            <li>김밥</li>
+            <li>떡볶이</li>
+        </ul>
+    </li>
+    <li>치킨</li>
+    <li>갈비찜</li>
+    <li>라면</li>
+    <li>탕수육</li>
+</ul>
+
+<ul type="circle">
+    <li>피자</li>
+    <li>치킨</li>
+    <li>갈비찜</li>
+    <li>라면</li>
+    <li>탕수육</li>
+</ul>
+
+<hr>
+<h2>순서있는 목록</h2>
+<ol type="1">
+    <li>피자</li>
+    <li>치킨</li>
+    <li>갈비찜</li>
+    <li>라면</li>
+    <li>탕수육</li>
+</ol>
+
+<ol type="A">
+    <li>피자</li>
+    <li>치킨</li>
+    <li>갈비찜</li>
+    <li>라면</li>
+    <li>탕수육</li>
+</ol>
+
+<ol type="I">
+    <li>피자</li>
+    <li>치킨</li>
+    <li>갈비찜</li>
+    <li>라면</li>
+    <li>탕수육</li>
+</ol>
+
+<ol type ="1">
+    <li>분식
+        <ol type="I">
+            <li>라면
+                <ol type="A">
+                    <li>신라면</li>
+                    <li>짜왕</li>
+                    <li>오징어짬뽕</li>
+                    <li>진짬뽕</li>
+                </ol>
+            </li>
+
+            <li>김밥</li>
+            <li>떡볶이</li>
+        </ol>
+    </li>
+    <li>치킨</li>
+    <li>갈비찜</li>
+    <li>라면</li>
+    <li>탕수육</li>
+</ol>
+<hr>
+<h2>정의 목록</h2>
+<dl>
+    <dt>WWW</dt>
+    <dd>WWW는 World Wide Web의 약자로 블라블라...</dd>
+
+    <dt>HTML</dt>
+    <dd>HTML은 HyperText Markup Language의 약자로 블라븝라</dd>
+
+    <dt>CSS</dt>
+    <dd>CSS는 Cascade Style Sheet의 약자로 블라블라...</dd>
+</dl>
+</body>
+
+
+</html>
+
+
+<!--
+    목록 list
+    여러 요소들을 일렬로 나열한 목록이나 명단을 의미
+    HTML에서는 ul, ol, dl 이라는 태그로 표현 가능
+
+    순서없는 목록(unorderd list)
+    순서없는 목록은 ul태그로 시작하고 li태그로 목록의 요소를 표현함함
+    목룍의 요소 앞에서 marker라고 하는 특수한 기호가 같이 출력됨
+    marker 유형은 disc, square, circle등이 있고
+    CSS를 사용하면 이미지를 MARKER로 사용할 수도 있음
+
+    순서있는 목록(ordered list)
+    순서있는 목록은 ol태그로 시작하고 li태그로 목록의 요소를 표현함
+    목록의 요소 앞에는 marker라고 하는 특수한 기호가 같이 출력됨
+    marker 유형은 숫자, 로마자, 알파벳등이 있음 ol태그안에서 타입으로 지정가능!
+
+    정의 목록 (difinition list)
+    용어와 그 용어의 뜻을 나열할때 사용함
+    정의목록은 dl태그로, 용어는 dt태그로 용어뜻은 dd태그를 사용함
+
+->
