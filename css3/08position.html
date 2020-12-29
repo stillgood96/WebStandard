@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        .box {width: 200px; height: 200px}
+        .static { background: yellow; position: static;}
+        .relative { background: green; position: relative;top: 50px; left: 100px;}
+
+        .base {background: orange; margin-top: 100px;}
+        .relative2{background: red;top: 50px; left: 100px; position: relative}
+        /*        이전 요소의 위치를 기준으로 독립적인 요소로 변경이 되는 것을 확인 할 수 있고
+        태그속의 태그를 보면 부모태그의 위치를 기준으로 위치를 잡는것을 확인 할 수 있다.*/
+
+        .absolute { background: navy; color: white;
+                            position: absolute; top: 100px; right: 100px;}
+        .base2 {position: relative; top: 250px; left: 250px; background: aqua}
+        .absolute2 { background: purple; color: white;
+            position: absolute; top: 300px; right: 100px;}
+       /*        뷰포트(절대좌표 body태그가 나오는 전체)를 기준으로 위치를 잡고 싶을때 absolute를사용한다*/
+        .box2{ background: cadetblue; width: 100px; height: 100px;}
+        .fixed {position: fixed; top:50px; right:50px;}
+
+        .normal { width: 150px; height: 150px; background: yellow; z-index:30;}
+        .absolutebox {width: 150px; height: 150px; position: relative;}
+        .red { background: red; top:-50px; right: -50px; z-index: 50;}
+        .green { background: green; top:-100px; right:-100px; z-index: 40;}
+        .blue { background: blue; top: -150px; right:-150px; z-index:20;}
+
+        .box3 { width: 150px; height:100px; border: 1px solid red;}
+        .overflow {/*overflow: auto;*/
+                            overflow-x: hidden; overflow-y: scroll;}
+        .overflow2 { overflow: scroll;}
+
+    </style>
+    <title>position속성</title>
+</head>
+<body>
+<h1>position속성</h1>
+<div class="box static">static</div>
+<div class="box relative">static</div>
+
+<div class="box base">
+    <div class="box relative2">relative2</div>
+</div>
+
+<div class="box absolute">absolute</div>
+
+<div class="box base2">
+    <div class="box absolute2">absolute2</div>
+</div>
+
+<div class="box2 fixed">장바구니</div>
+
+<div class="normal">box1</div>
+<div class="red absolutebox">box2</div>
+<div class="green absolutebox">box3</div>
+<div class="blue absolutebox">box4</div>
+
+<hr>
+<div class="box3 overflow">차디찬 ~그라스에 빠아알가아아안 립스퉥~ 워우어웡우어 잘가세요~ 잘가세요 ~ 아아 ~~ 패건들지마 손모가지 날라가붕게 따라리따리리 따리라 쿵짝짝 쿵짝짝 따라리라리ㅣ논
+    나는 이선우 나는이선우너는 누구냐 ~~ 아아아ㅏ아~~ 어디보자 어디보자 넌 담에ㅗ바자</div>
+
+<div class="box3 overflow2">
+    <img src="../img/PS20110900045.jpg">
+</div>
+
+</body>
+</html>
+
+<!--
+    position
+    대상요소의 위치를 정의함
+    ( top, bottom, left, right 속성과 함께 사용 )
+
+    static : 기본 배치 방식
+                위에서 아래로(블록요소)
+                왼쪽에서 오른쪽으로 배치 (인라인요소)
+
+    relative : 상대위치 배치방식
+                    static으로 선언된 요소를 기준으로 좌표속성을 이용해서 배치
+
+    absolute : 절대좌표 배치방식
+                     브라우져 가시영역 ( document  좌상단을 기준으로 좌표속성을 이용해서 배치
+
+    fixed : 고정좌표 배치방식
+                브라우져 가시영역(document body)을 기준으로
+                배치되어 스크롤을 하더라도 언제나 그 위치에 고정배치
+-->
+
+<!--
+    z-index
+    z-index는 화면 전면에 출력되는 순서를 지정할 수 있음
+    z-index에 큰 값을 지정할수록 다른 요소들 보다 위에 배치됨
+-->
+
+<!--
+    overflow
+    대상요소의 영역을 벗어나는 요소에 대한 처리
+    필요에 따라 스크롤바를 표시하면 영역을 벗어나는 요소 모두 출력 가능
+    hidden, visible, scroll, auto
+
+    스크롤바를 세세하게 설정할 필요가 있는 경우
+    overflow-x, overflow-y를 사용해도 됨
+
+-->

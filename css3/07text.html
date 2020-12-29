@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>텍스트속성</title>
+    <style>
+        .fontsize1 { font-size: 16px;}  /*디폴트 값이 16px?*/
+        .fontsize2 { font-size: 100%;}
+        .fontsize3 { font-size: 1em;}
+
+        .fontstyle { font-style: italic }
+        .fontfamily1 {font-family: "궁서체";}
+        .fontweight {font-weight:bolder}
+
+        .lineheight1 {line-height:70%}
+        .lineheight2 {line-height:1.2}    /* 16px * 1.2 */
+        .lineheight3 {line-height:3.0}
+
+        .letterspacing1 {letter-spacing: 25px;}
+        .letterspacing2 {letter-spacing: 35px;}
+
+        .center {text-align: center;}
+        .right {text-align: right;}
+
+        .overline {text-decoration:  overline}
+        .underline {text-decoration:  underline}
+        .linethrough {text-decoration:  line-through}
+
+        .box {width: 150px; height: 160px; border: 1px solid red; }
+        .takeoverflow { display: -webkit-box;
+                                    -webkit-line-clamp: 8;
+                                    -webkit-box-orient: vertical;
+                                    overflow: hidden;
+                                    text-overflow: ellipsis;}
+        .takeoverflow2 {margin-top: 100px; border:1px solid blue;
+                                    height: 25px; width: 300px;
+                                    white-space: nowrap; overflow: hidden;/*white-space : nowrap 줄바꿈을안하겠다 overflow: border 밖에 있는내용을 숨켜주겠다 히힛 ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ*/
+                                    text-overflow: ellipsis} /*elipsis ... 으로 무언가내용이 더있다는 것을 암시하겠다 히히히*/
+
+        .wordwrap {word-wrap: break-word; margin-top: 100px;
+                             border:1px solid orange;}
+
+        .wordbreak {word-break: break-word; margin-top: 100px;
+            border:1px solid orange;}
+
+        .whitespace { white-space: pre;}
+
+    </style>
+</head>
+
+<body>
+<h1>텍스트 속성</h1>
+<p class="fontsize1">시간은 금이라구, 친구!</p>
+<p class="fontsize2">시간은 금이라구, 친구!</p>
+<p class="fontsize3">시간은 금이라구, 친구!</p>
+
+<p class="fontfamily1">시간은 금이라구, 친구!</p>
+<p class="fontstyle">시간은 금이라구, 친구!</p>
+<p class="fontweight">시간은 금이라구, 친구!</p>
+
+
+
+<p class="lineheight1">
+    시간은 금이라구, 친구!<br>
+    시간은 금이라구, 친구!<br>
+    시간은 금이라구, 친구!<br>
+    시간은 금이라구, 친구!<br>
+</p>
+<p class="lineheight2">
+    시간은 금이라구, 친구!<br>
+    시간은 금이라구, 친구!<br>
+    시간은 금이라구, 친구!<br>
+    시간은 금이라구, 친구!<br>
+</p>
+<p class="lineheight3">
+    시간은 금이라구, 친구!<br>
+    시간은 금이라구, 친구!<br>
+    시간은 금이라구, 친구!<br>
+    시간은 금이라구, 친구!<br>
+</p>
+
+<p class="letterspacing1">시간은 금이라구, 친구</p>
+<p class="letterspacing2">World of Warcraft</p>
+
+<p class="center">시간은 금이라구, 친구</p>
+<p class="right">시간은 금이라구, 친구</p>
+
+ㅏ
+<p class="overline">시간은 금이라구, 친구</p>
+<p class="underline">시간은 금이라구, 친구</p>
+<p class="linethrough">시간은 금이라구, 친구</p>
+
+<div class="box takeoverflow">차디찬 ~그라스에 빠아알가아아안 립스퉥~ 워우어웡우어 잘가세요~ 잘가세요 ~ 아아 ~~ 패건들지마 손모가지 날라가붕게 따라리따리리 따리라 쿵짝짝 쿵짝짝 따라리라리ㅣ논
+나는 이선우 나는이선우너는 누구냐 ~~ 아아아ㅏ아~~ 어디보자 어디보자 넌 담에ㅗ바자</div>
+
+
+<div class="box2 takeoverflow2">오오오 ~나느 머쉬베놈 멋이 베서 멋이베놈 어허어허 어데보자 어데보자~~ 너는 다메보자 ~ 다메다메요 이따이따요 ~ 이따이따요 ~ 장윤정의 탬버린 그건 현숙 탬버린 탬탬버린</div>
+
+<hr>
+
+<DIV class="box wordwrap">abcdefghijklmnopqrstuvwxyzhttp://123.123.456.789.123:8080/rookie/index.html</DIV>
+
+<hr>
+
+<DIV class="box wordbreak">abcdefghijklmnopqrstuvwxxxxxyz http://123.123.456.789.123:8080/rookie/index.html</DIV>
+</body>
+
+<hr>
+<div class="whitespace">
+    public class HelloWorld {
+        public static void main(String [] args) {
+                Sysetm.out.println("Hello, World!!");
+        }
+    }
+</div>
+
+</html>
+
+<!--
+font/text 속성
+폰트 및 텍스트의 크기, 지정, 스타일, 정렬등을 설정할 수 있음
+
+font-size : 글자의 크기 설정
+font-family : 글자의 글꼴 설정
+                      특정 글꼴이 미리 설치 되어야 보이는 경우도 있음
+                      단, 웹폰트를 사용하면 바로 보이기도 함
+font-style  : 글자의 모양
+font-weight : 글자의 굵기 설정
+font-variant : 글자의 대소문자 설정
+line-height : 텍스트의 줄간격 설정
+letter-spacing : 글자간의 간격 설정
+text-align : 텍스트의 수평정렬 설정
+text-decoration : 텍스트 꾸미기 설정
+text-overflow : 화면요소의 영역을 벗어나는 텍스트에 대한 처리
+word-wrap : 대상요소의 영역을 벗어나는 단어에 대한 처리
+word-break : 대상요소의 영역을 벗어나는 단어에 대한 강제적 처리
+white-space : 공백 space ,들여쓰기 tab, 줄바꿈등을 의미하는 기호
+                        html상에서는 이러한 기호들이 하나만 인식되거나 무시됨
+                        white-space 속성을 이용하면 이러한 기호를 제어할 수있음
+                        nowrap : 모든 줄바꿈 무시
+                        pre : 공백, 들여쓰기, 줄바꿈 모두 인식
+
+
+글자속성의 단축표기식
+font : 스타일 대소문자여부 굵기 크기 줄간격 글꼴
+
+
+
+-->
