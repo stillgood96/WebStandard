@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>JSPv1</title>
+    <link rel="stylesheet" href="/css3/normalize.css">
+    <style>
+        body{margin:0; padding:0;}
+        .container { width: 1150px; margin: 0 auto;}
+        nav ul{ list-style: none; padding:0 0 15px 0;}
+        nav ul li {float: left; padding-left: 150px;}
+        nav hr {clear:both; height: 1px; background: black;}
+
+        #main {min-height: 500px;}
+
+        footer hr {height:1px; background: black;}
+        footer p {text-align: center;}
+
+        /*링크에 대한 스타일 정의*/
+        /*링크색 : 검정, 밑줄제거*/
+        /*링크hover : 빨강, 밑줄표시*/
+        #nav a {font-weight: bold;}
+        #nav a:link {color:black; text-decoration: none;}
+        #nav a:hover {color:red; text-decoration: underline;}
+        #nav a:visited {color:black; text-decoration: none;}
+        #nav a:active {color:red; text-decoration: none;}
+    </style>
+
+    <style>
+        .view {width: 750px; margin:75px auto;}
+        .view div {margin-bottom:10px;}
+        .view label { width: 100px; display: inline-block; font-weight: bold; text-align: right; vertical-align: right;
+        margin-right: 10px;}
+        .contents {width:550px; height: 150px; display: inline-block; border: 1px dashed orange;
+                            overflow: auto; padding: 5px;}
+        .dragup{vertical-align: top;}
+
+    </style>```````
+
+
+</head>
+
+<body>
+<div class="container">
+    <header><h1>JSP 프로젝트 v1</h1></header>
+    <nav>
+        <ul id="nav">
+            <li><a href="../teacherindex.html">Home</a></li>
+            <li><a href="../signup.html.html">회원가입</a></li>
+            <li><a href="../teacherlogin.html">로그인</a></li>
+            <li><a href="../teacherlist.html">게시판</a></li>
+            <li><a href="../teacherinfo.html">회원정보</a></li>
+        </ul>
+        <hr>
+    </nav>
+
+
+    <div id="main">
+        <section>
+            <h2>게시판-본문글</h2>
+            <div class="view">
+                <div>
+                    <label>제목</label>
+                    <span>시간은 금이라네 참말로 금이라네 깔깔마녀가 깔깔거리다 꼬깔콘을 먹는다.</span>
+                </div>
+                <div>
+                    <label>작성자</label>
+                    <span>깔깔마녀</span>
+                </div>
+
+                <div>
+                    <label>작성일</label>
+                    <span>2020-12-31 12시30분.</span>
+                </div>
+
+                <div>
+                    <label class="dragup">본문내용</label>
+                    <span class="contents">시간은 금이라네 참말로 금이라네 깔깔마녀가 깔깔거리다 꼬깔콘을 먹는다.
+                    시간은 금이라네 참말로 금이라네 깔깔마녀가 깔깔거리다 꼬깔콘을 먹는다
+                    시간은 금이라네 참말로 금이라네 깔깔마녀가 깔깔거리다 꼬깔콘을 먹는다
+                    시간은 금이라네 참말로 금이라네 깔깔마녀가 깔깔거리다 꼬깔콘을 먹는다
+                    시간은 금이라네 참말로 금이라네 깔깔마녀가 깔깔거리다 꼬깔콘을 먹는다
+                    시간은 금이라네 참말로 금이라네 깔깔마녀가 깔깔거리다 꼬깔콘을 먹는다
+                    시간은 금이라네 참말로 금이라네 깔깔마녀가 깔깔거리다 꼬깔콘을 먹는다
+                    시간은 금이라네 참말로 금이라네 깔깔마녀가 깔깔거리다 꼬깔콘을 먹는다
+                    시간은 금이라네 참말로 금이라네 깔깔마녀가 깔깔거리다 꼬깔콘을 먹는다
+                    시간은 금이라네 참말로 금이라네 깔깔마녀가 깔깔거리다 꼬깔콘을 먹는다
+                    시간은 금이라네 참말로 금이라네 깔깔마녀가 깔깔거리다 꼬깔콘을 먹는다</span>
+                </div>
+
+
+
+            </div>
+
+        </section>
+    </div>
+
+    <footer>
+        <hr>
+        <p>copyright &copy; 2021. 2017. imlsw96. All Rights Reserved</p>
+    </footer>
+
+</div>
+</body>
+
+</html>

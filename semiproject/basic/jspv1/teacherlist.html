@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>JSPv1</title>
+    <link rel="stylesheet" href="/css3/normalize.css">
+    <link rel="stylesheet" href="base.css";>
+
+    <style>
+        table { width:75% ;border: 1px solid black; margin:0 auto;border-collapse: collapse; ; margin-bottom: 50px;  table-layout: fixed}
+
+        th, td {border: 1px solid black; text-align: center; padding: 10px; }
+        td:nth-of-type(2){white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+        .newbtn{text-align: right; border-top: 1px solid white; border-left: 1px solid white; border-right: 1px solid white;}
+        .bdgnb {border-left: 1px solid white;border-right: 1px solid white;border-bottom: 1px solid white;}
+        .cpage { font-weight:bold; font-size: 30px; color:red;}
+        tbody a {font-weight: normal; }
+        tbody a:link {color:black; text-decoration: none;}
+        tbody a:hover {color: orange; }
+        tbody a:active {color: crimson;}
+        tbody a:visited {color: black;}
+    </style>
+
+</head>
+
+<body>
+<div class="container">
+    <header><h1>JSP 프로젝트 v1</h1></header>
+<nav>
+    <ul id="nav">
+        <li><a href="./teacherindex.html">Home</a></li>
+        <li><a href="./signup.html">회원가입</a></li>
+        <li><a href="./teacherlogin.html">로그인</a></li>
+        <li><a href="./teacherlist.html">게시판</a></li>
+        <li><a href="./teacherinfo.html">회원정보</a></li>
+    </ul>
+    <hr>
+</nav>
+        
+    
+<div id="main">
+    <section>
+           <h2>게시판</h2>
+        
+        <table>
+            <colgroup> <!-- 테이블 컬럼 너비 정의 -->
+                <col style="width:10%">
+                <col>
+                <col style="width:15%">
+                <col style="width:15%">
+                <col style="width:10%">
+            </colgroup>
+          
+            <thead>
+                  <tr><td  colspan="5" class="newbtn"><button type="button"
+                  onclick="location.href='./jspvteacher/write.html'">글쓰기</button></td></tr>
+            <tr>
+                <th>번호</th><th>제목</th><th>작성자</th><th>작성일</th><th>조회</th>
+            </tr>
+            </thead>
+            <tbody>
+            <div id="literal">
+                <tr><td>1</td><td><a href="../jspv1/jspvteacher/view.html">시간은 금이라구, 친구! 진짜라구, 친구! 정말 참말이라구 으아아아아악 느어어어어어어라라</td><td>imlsw96</td><td>2020-12-23</td><td>777</td></tr>
+                <tr><td>2</td><td>시간은 금이라구, 친구! 진짜라구, 친구! 정말..</td><td>imlsw96</td><td>2020-12-23</td><td>777</td></tr>
+                <tr><td>3</td><td>시간은 금이라구, 친구! 진짜라구, 친구! 정말..</td><td>imlsw96</td><td>2020-12-23</td><td>777</td></tr>
+                <tr><td>4</td><td>시간은 금이라구, 친구! 진짜라구, 친구! 정말..</td><td>imlsw96</td><td>2020-12-23</td><td>777</td></tr>
+                <tr><td>5</td><td>시간은 금이라구, 친구! 진짜라구, 친구! 정말..</td><td>imlsw96</td><td>2020-12-23</td><td>777</td></tr>
+                <tr><td>6</td><td>시간은 금이라구, 친구! 진짜라구, 친구! 정말..</td><td>imlsw96</td><td>2020-12-23</td><td>777</td></tr>
+                <tr><td>7</td><td>시간은 금이라구, 친구! 진짜라구, 친구! 정말..</td><td>imlsw96</td><td>2020-12-23</td><td>777</td></tr>
+                <tr><td>8</td><td>시간은 금이라구, 친구! 진짜라구, 친구! 정말..</td><td>imlsw96</td><td>2020-12-23</td><td>777</td></tr>
+                <tr><td>9</td><td>시간은 금이라구, 친구! 진짜라구, 친구! 정말..</td><td>imlsw96</td><td>2020-12-23</td><td>777</td></tr>
+                <tr><td>10</td><td>시간은 금이라구, 친구! 진짜라구, 친구! 정말..</td><td>imlsw96</td><td>2020-12-23</td><td>777</td></tr>
+                <tr><td>11</td><td>시간은 금이라구, 친구! 진짜라구, 친구! 정말..</td><td>imlsw96</td><td>2020-12-23</td><td>777</td></tr>
+                <tr><td colspan="5" class="bdgnb"><p>◁◀◀<span class="cpage">1</span> 2 3 4 5 6 7 8 9 10 ▶▶▷</p></td></tr>
+            </div>
+            </tbody>
+        </table>
+    </section>
+ </div>
+
+<footer>
+    <hr>
+    <p>copyright &copy; 2021. 2017. imlsw96. All Rights Reserved</p>
+</footer>
+   
+</div>
+</body>
+
+</html>

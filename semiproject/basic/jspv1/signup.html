@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>JSPv1</title>
+    <link rel="stylesheet" href="/css3/normalize.css">
+    <link rel="stylesheet" href="base.css";>
+
+    <style>
+        #signup {margin:150px auto;}
+        #signup th,td { padding-top:10px;}
+        #signup td { padding-left:10px;}
+        #button1, #button2 {font-weight: bold; width: 65px; }
+    </style>
+
+
+</head>
+
+<body>
+<div class="container">
+    <header><h1>JSP 프로젝트 v1</h1></header>
+    <nav>
+        <ul id="nav">
+            <li><a href="./teacherindex.html">Home</a></li>
+            <li><a href="./signup.html.html">회원가입</a></li>
+            <li><a href="./teacherlogin.html">로그인</a></li>
+            <li><a href="./teacherlist.html">게시판</a></li>
+            <li><a href="./teacherinfo.html">회원정보</a></li>
+        </ul>
+        <hr>
+    </nav>
+
+
+    <div id="main">
+        <section>
+            <h2>회원가입</h2>
+            <table id="signup">
+                <form method="post" name="signup">
+                    <tr><th>아이디</th>
+                        <td>
+                            <label for="id"></label>
+                            <input type="text" id="id" name="id">
+                        </td></tr>
+                    <tr><th>비밀번호</th>
+                        <td>
+                            <label for="pwd"></label>
+                            <input type="password" id="pwd" name="pwd">
+                        </td></tr>
+                    <tr><th>비밀번호 확인</th>
+                        <td>
+                            <label for="pwdcheck"></label>
+                            <input type="password" id="pwdcheck" name="pwdcheck">
+                        </td></tr>
+                    <tr><th>이름</th>
+                        <td>
+                            <label for="name"></label>
+                            <input type="text" id="name" name="name">
+                        </td></tr>
+
+                    <tr><td></td><td id="bt2"><button id="button1">입력완료</button><button id="button2">다시입력</button></td></tr>
+
+                </form>
+            </table>
+        </section>
+    </div>
+
+    <footer>
+        <hr>
+        <p>copyright &copy; 2021. 2017. imlsw96. All Rights Reserved</p>
+    </footer>
+
+</div>
+</body>
+
+</html>

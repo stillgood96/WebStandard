@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>JSPv1</title>
+    <link rel="stylesheet" href="/css3/normalize.css">
+    <link rel="stylesheet" href="base.css";>
+
+    <style>
+        #login {margin:150px auto;}
+        #login th,td { padding-top:10px;}
+        #login td { padding-left:10px;}
+        #button {font-weight: bold; width: 65px; }
+
+    </style>
+
+</head>
+
+<body>
+<div class="container">
+    <header><h1>JSP 프로젝트 v1</h1></header>
+    <nav>
+        <ul id="nav">
+            <li><a href="./teacherindex.html">Home</a></li>
+            <li><a href="./signup.html">회원가입</a></li>
+            <li><a href="./teacherlogin.html">로그인</a></li>
+            <li><a href="./teacherlist.html">게시판</a></li>
+            <li><a href="./teacherinfo.html">회원정보</a></li>
+        </ul>
+        <hr>
+    </nav>
+
+
+    <div id="main">
+        <section>
+            <h2>로그인</h2>
+            <table id="login">
+                <form method="post" name="login">
+                <tr><th>아이디</th>
+                    <td>
+                        <label for="id"></label>
+                        <input type="text" id="id" name="id">
+                    </td></tr>
+                <tr><th>비밀번호</th>
+                    <td>
+                        <label for="pwd"></label>
+                        <input type="password" id="pwd" name="pwd">
+                    </td></tr>
+                <tr><td></td><td id="bt"><button id="button">로그인</button></td></tr>
+                </form>
+            </table>
+        </section>
+    </div>
+
+    <footer>
+        <hr>
+        <p>copyright &copy; 2021. 2017. imlsw96. All Rights Reserved</p>
+    </footer>
+
+</div>
+</body>
+
+</html>
