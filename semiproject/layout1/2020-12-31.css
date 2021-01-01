@@ -1,0 +1,42 @@
+
+body {padding:0; margin :0;}
+/*헤더*/
+.container {width:1150px; margin:15px auto; border: 3px solid black;}
+.container  header {}
+.container h1 {background:silver; width : 180px;  text-align: center; margin-left:20px;padding:20px; float:left;}
+header {height: 125px;}
+header p {float:left; margin-top:84px; padding-left:25px; text-decoration: none;}
+header ul {float:right; margin-right:25px; list-style-type: none;}
+header li {float:left; padding-right:5px;font-weight: bold;}
+nav { background:silver; height:56px; }
+nav input{ padding: 4px; margin-top:15px; margin-left:10px; width:350px;  border:3px solid gray;}
+nav select{width:200px; padding: 3px; border:3px solid gray;}
+nav button{width:120px; padding: 4px; margin-left:10px; background: dimgray; border-radius: 5px;}
+
+/*메인*/
+#main {min-height: 500px;  clear:both;}
+#main aside{float:left;}
+aside ul {list-style-type: none; border: 3px solid black; padding:0; margin:10px 10px 20px 20px; width:220px;
+                }
+aside li {border-bottom:2px solid silver; font-size:18px; font-weight: bold; padding:8px 14px;}
+aside li:nth-of-type(7) {border-bottom: none;}
+#banner {float: right; border:3px solid black; width:850px; height: 277px; margin:10px 30px 0px 5px;}
+#banner h3 {  text-align: center; margin-top:87px; }
+#banner ul {list-style-type: none; float:right; margin:30px 20px;}
+#banner li {float: left; padding:8px 15px; background: #dcdcdc; margin-right: 10px; margin-top:40px;
+                    font-weight: bold;}
+
+#prodlist{clear:both;}
+#prodlist h3 {margin-left:20px; margin-top: 50px;  }
+#prodlist ul {list-style-type: none; margin-top: 50px; }
+#prodlist li {float:left; padding-right:50px; margin-bottom: 160px; margin-right:15px; margin-left:20px;padding-bottom: -5px; }
+#prodlist div{background: silver; border-radius: 5px; width: 100px; height: 100px;}
+#prodlist a {text-decoration: underline; color:black;}
+#prodlist p {text-align: center;}
+#prodlist a:hover {text-decoration: underline; color:red;}
+
+
+/*footer*/
+footer {clear:both; border-top: 3px solid black; height: 250px; }
+footer ul{list-style-type: none; display: inline-block;  padding-right:50px; margin-left:5px;}
+
