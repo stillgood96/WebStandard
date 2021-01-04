@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트 개요</title>
+    <script>
+        alert('Hello, World #1 ');
+    </script>
+</head>
+<body>
+<h1>자바스크립트 기초</h1>
+<Button type="button" onclick="alert('Hello, World#3')">여기를 눌러보세요</Button>
+
+<script>
+    alert('Hello, World #2');
+</script>
+
+<script>
+    // 식별자 정의시 타입을 안써줘도 알아서 잘 설정해서 나오는 것을 확인할 수 있다.
+    let name = '이선우'; // var을 적어줌으로 변수임을 나타내주는게 좋다.  var은 옛날버전 요즘은 let이 최신!
+    kor= 99;
+    eng = 98;
+    math= 98;
+    sum=kor+eng+math;
+    avg=sum/3;
+
+    document.write("<p>");
+    document.write(name+"<br>");
+    document.write(kor+"<br>");
+    document.write(eng+"<br>");
+    document.write(sum+"<br>");
+    document.write(avg+"<br>");
+
+    console.log('으하하하하하하 으핫핫핫핫 오핫핫핫핫 이핫핫핫핫 소스 ~');
+
+    let h1 = document.getElementsByTagName('h1') // 모든 h1태그 조회해서 특정 요소인 [0]을 불러와 출력하겠따뤼
+    h1[0].innerHTML = name + "/" + sum;
+</script>
+</body>
+</html>
+<!--
+자바스크립트 javascript
+1995년 넷스케이프사에서 브랜든 아이크가 개발한
+동적 웹페이지 생성 프로그래밍 언어
+현재 1996년 넷스케이프사의 자바스크립트에 대항해서
+마이크로소프트의 JScript가 발표
+
+이후 자바스크립트와 JScript의 파편화로
+표준화된 자바스크립트의 필요성에 의해
+1997년 7월, ECMA-262라 불리는 표준화된
+ECMAScript라는 이름의 자바스크립트가 발표
+
+2018년 기준, ECMAScript 2018 (ES9)이 발표
+하지만, 2015년에 발표된 ECMAScript 2015 ( ES6 ) 을 더 많이 사용
+
+자바스크립트 = ECMA-262(자바스크립트 표준) +
+                            브라우저가 지원하는 WebAPI (DOM, BOM, XMLHttpREquest..)
+웹 브라우져에서만 실행되는 인터프리터 언어
+c언어 스타일의 명령형과 객체지향형 프로그래밍을 지원하는
+멀티패러다임 프로그램언어
+
+TypeScript
+마이크로소프트에서 개발한 정적 자바스크립트
+
+stackoverflow developer survey 2020
+-->
+
+<!--
+자바스크립트 실행방법
+1. head에 script태그 정의후 실행
+2. body에 script태그 정의후 실행 ( 추천 ! )
+3. 요소에 스크립트 정의후 이벤트 발동시 스크립트 실행
+ -->
+
+<!--
+자바스크립트 문법
+C언어나 자바와 유사함
+
+문장의 끝은 ; ( 생략가능 하지만 쓰는걸 추천 )
+주석은 //, /* */ 사용
+문자열 리터럴(값) : " ", ' '  (작은따옴표 큰따옴표 사용 가능)
+식별자 정의시 영문자, 숫자, _ , $만 사용가능하다.
+식별자 정의시 camel 표기법 ( joinMember, writeBoard ), underscore (join_member, write_board )  표기법 사용
+
+식별자 정의시 타입 명시를 동적으로 사용할 수 있음 ( var / let 키워드 사용 )
+=> 타입 추론 type inference
+
+자바스크립트 예약어
+-->
+
+
+<!--
+자바스크립트 출력문
+alert(출력할 내용);                    - 경고대화상자에 출력 !
+document.write(출력할 내용); -  브라우져 내 출력
+요소명.innerHTML ( 출력할 내용 ); - 문서내 특정요소에 출력
+console.log (출력내용);            -  브라우져 내 콘솔창에 출력
+-->
+
+<!--
+자바스크립트 디버깅
+브라우저의 개발자도구( ctrl + shift + i )  내 console을 이용
+
+-->
