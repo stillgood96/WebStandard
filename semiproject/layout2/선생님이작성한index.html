@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>레이아웃2</title>
+    <link rel="stylesheet" href="/css3/normalize.css";>
+    <link rel="stylesheet" href="../css/layout2.css">
+    <style>
+        /* 공통사항 */
+        body {margin:0; padding:0;}
+        ul { list-style-type: none; padding:0;}
+
+        /* 레이아웃 */
+        .container {width: 1150px; margin:0 auto;
+                                /*border:1px solid red;*/}
+        header {height: 125px; border: 1px solid mediumpurple; background: mediumpurple}
+        nav {height: 35px; border : 1px solid mediumpurple;}
+        #main{min-height: 800px; /*border : 1px solid orange;*/}
+        aside {width: 225px; background: yellow;/*border: 1px solid green;*/ min-height: 800px;}
+        footer {height: 125px; /*border: 1px solid darkorchid;*/ }
+
+        /* 헤더 */
+        header h1 {width: 125px; height: 125px;  margin:0; background: purple; border: 1px solid purple;
+                            float:left;}
+        header ul {float:right;}
+        header li { float:left; padding-right:  10px;}
+        .search {margin-left: 125px; float:left; margin-top:40px; }  /*그냥 마진을 주니 안움직여서 float을 주니까 움직임 */
+        .search input { border: 5px solid green; height: 30px; width: 500px;}
+        .search button { width: 100px; height: 41px; background: green; color:white; font-size: 18px; font-weight: bold;
+                                    border: 5px outset green; }
+        /* 네비 */
+        nav { background: black; color: white; }
+        nav ul{clear: both; margin-top: 9px;}
+        nav li{float:left; padding-left:75px; font-weight: bold;font-size: 18px;}
+
+        /* lnb */
+        aside {float: left;}
+
+        /*메인*/
+        #content {width:915px; float:right; background: orange;}
+        #welcome { background: mintcream; width: 895px; height: 300px; margin: -15px 10px 10px 10px;}
+        #welcome h1 {font-family: Cambria; font-size:55px; padding:10px 10px;}
+        #welcome p {width:650px; padding-left:30px; margin-top:-30px;}
+        /*게시판-최신정보*/
+        #board{ width: 895px; height: 300px; margin: -15px 10px 10px 10px;}
+        #newinfo {width: 440px;  float:left; background: ghostwhite; }
+        #newinfo h3{background: black; color:white; padding: 5px 2px; margin:0;}
+        #newinfo li {padding-left:25px;height:35px; background: url(../../img/free-icon-dump-truck-3963791.png)no-repeat top left;}
+        #newinfo li:nth-of-type(2) {margin-top:20px;}
+        #newinfo li:first-child{background: none; padding:0}
+
+
+        /*게시판-사용기*/
+        #used {width: 440px; float: right; background: ghostwhite; }
+        #used h3 {background: black; color: white; margin:0; padding:5px 2px;}
+        #used li {padding-left:25px;height:31.5px; background: url(../../img/free-icon-dump-truck-3963791.png)no-repeat top left;}
+        #used li:nth-of-type(2) {margin-top:20px;}
+        #used li:first-child{background: none; padding: 0}
+
+        /*이미지 갤러리*/
+        #gallery { clear:both; width: 895px; height: 350px; margin: 0px 10px 10px 10px; border: 1px solid black; background: burlywood}
+        #gallery h3 {background: purple; color: white; padding: 5px 1px; margin:0;}
+        #gallery ul {background: gold;}
+        #gallery li {float: left; padding-left: 38px;}
+        #gallery div {width: 100px; height:100px; border: 1px dashed black; background: white; }
+        #gallery p {text-align: center}
+
+        /*lnb*/
+        .lgmenu li {float : left; font-size: 12px; padding: 10px 10px;}
+        aside hr {clear:both; width: 205px; border: 1px solid indigo;}
+        .atlogin {margin-top:5px;}
+        .atlogin li {float: left; font-size: 12px; padding: 7px 18px;}
+        .loginfrm {}
+        .loginfrm li {float: left;}
+        .loginfrm input {width: 125px; margin: 3px 7px;}
+        .loginfrm button {width: 72px; height: 50px; position: relative; top: -25px;}
+
+        #notice {clear:both; background: lightyellow; margin: 0px 7px;}
+        #notice h3{background: black; color:white; padding: 5px 1px;}
+        #notice ul { font-size: 14px;}
+        #notice li { height: 30px; padding-left:25px;
+            background: url(../../img/free-icon-dump-truck-3963791.png) no-repeat top left; padding-top:5px; }
+        .ad { width: 210px; margin: 50px auto;
+            height: 300px; border: 1px solid black;}
+        .ad {background: url(../../img/PS20110900045.jpg)no-repeat bottom; text-align: center; font-weight: bold; }
+        .ad h3{background: black; color:white;}
+
+
+
+        /* footer */
+        footer {clear:both; background: green; }
+        .nav { height: 30px; margin: 0px;
+                     background: black; color: white; padding-top:7px;}
+        .nav li {float:left;  padding-left: 82px; font-size: 18px; font-weight: bold;}
+        footer p {text-align: right;font-weight: bold;margin:45px 15px 0 0;}
+    </style>
+
+
+</head>
+<body>
+<div class="container">
+<header>
+    <h1>로고</h1>
+    <ul class="qmenu">
+        <li>회원정보</li>
+        <li>로그인</li>
+        <li>회원가입</li>
+    </ul>
+    <div class="search"><input type="text">
+        <button type="button">검색</button></div>
+</header><!--헤더영역-->
+<nav>
+    <ul>
+        <li>프로젝트개요</li>
+        <li>공지사항</li>
+        <li>게시판</li>
+        <li>자료실</li>
+        <li>갤러리</li>
+        <li>커뮤니티</li>
+        <li>쇼핑몰</li>
+        <li>관리자</li>
+    </ul>
+</nav><!--네비영역-->
+<div id="main">
+    <aside>
+        <div>
+            <ul class="lgmenu">
+                <li>회원가입</li>
+                <li>아이디찾기</li>
+                <li>비밀번호찾기</li>
+            </ul>
+            <hr>
+            <ul class="atlogin">
+                <li>보안접속 ON</li>
+                <li><input type="checkbox">자동로그인</li>
+            </ul>
+            <ul class="loginfrm">
+                <li><input type="text" placeholder="아이디"></li>
+                <li><input type="password" placeholder="비밀번호"></li>
+                <li><button type="button">로그인</button></li>
+            </ul>
+        </div>
+        <div id="notice">
+            <h3>공지사항</h3>
+            <ul>
+                <li>아이유 사진은 업로드 금지!</li>
+                <li>수지 사진은 업로드 환영!</li>
+                <li>아이유 사진은 업로드 금지!</li>
+                <li>수지 사진은 업로드 환영!</li>
+                <li>아이유 사진은 업로드 금지!</li>
+                <li>수지 사진은 업로드 환영!</li>
+                <li>아이유 사진은 업로드 금지!</li>
+            </ul>
+        </div>
+        <div class="ad">
+            <h3>아이러브 민초!</h3>
+        </div>
+    </aside>
+    <div id="content">
+        <div id="welcome">
+            <h1>Hello, World!!</h1>
+             <p>Pellentesque erat tellus, tristique ut pulvinar nec, tincidunt nec sem. Vestibulum tempus elementum massa, in vulputate est tincidunt a. Aenean vel diam nunc. Maecenas ullamcorper suscipit purus, sit amet tincidunt nibh pharetra sit amet. Aliquam non rutrum est. Morbi tempus nunc vitae maximus placerat. Morbi interdum metus diam, non ultrices nibh blandit eu. Pellentesque ut gravida dolor, sit amet aliquet erat. Donec vehicula mi in nisi varius, eget vulputate justo interdum. Aenean in justo at neque lacinia hendrerit sed a sem. Integer lobortis arcu eros, suscipit fermentum erat tempor vel. Pellentesque quis nibh magna., </p>
+        </div>
+        <div id="board">
+
+            <ul id ="newinfo">
+                <li><h3>최신정보</h3></li>
+                <li>[SKT/번이] &LT;아이폰 12프로 할원 0원&GT;</li>
+                <li>[KT/번이] &LT;아이폰 12 미니 차비 10만원&GT;</li>
+                <li>[SKT/번이] &LT;아이폰 12프로 할원 0원&GT;</li>
+                <li>[KT/번이] &LT;아이폰 12 미니 차비 10만원&GT;</li>
+                <li>[SKT/번이] &LT;아이폰 12프로 할원 0원&GT;</li>
+                <li>[KT/번이] &LT;아이폰 12 미니 차비 10만원&GT;</li>
+                <li>[SKT/번이] &LT;아이폰 12프로 할원 0원&GT;</li>
+                <li>[KT/번이] &LT;아이폰 12 미니 차비 10만원&GT;</li>
+            </ul>
+
+
+            <ul id="used">
+                <li><h3>사용기</h3></li>
+                <li>엑스맨 감상기 [노스포]</li>
+                <li>해리포터 감상기 [노스포]</li>
+                <li>아이패드 미니1 간단한 사용기</li>
+                <li>엑스맨 감상기 [노스포]</li>
+                <li>해리포터 감상기 [노스포]</li>
+                <li>아이패드 미니1 간단한 사용기</li>
+                <li>엑스맨 감상기 [노스포]</li>
+                <li>해리포터 감상기 [노스포]</li>
+                <li>아이패드 미니1 간단한 사용기</li>
+            </ul>
+        </div>
+
+        <div id="gallery">
+            <h3>이미지 갤러리</h3>
+            <ul>
+                <li>
+                    <div></div>
+                    <p>수지 환영</p>
+                </li>
+                <li>
+                    <div></div>
+                    <p>수지 환영</p>
+                </li>
+                <li>
+                    <div></div>
+                    <p>수지 환영</p>
+                </li>
+                <li>
+                    <div></div>
+                    <p>수지 환영</p>
+                </li>
+                <li>
+                    <div></div>
+                    <p>수지 환영</p>
+                </li>
+                <li>
+                    <div></div>
+                    <p>수지 환영</p>
+                </li>
+                <li>
+                    <div></div>
+                    <p>수지 환영</p>
+                </li>
+                <li>
+                    <div></div>
+                    <p>수지 환영</p>
+                </li>
+                <li>
+                    <div></div>
+                    <p>수지 환영</p>
+                </li>
+                <li>
+                    <div></div>
+                    <p>수지 환영</p>
+                </li>
+                <li>
+                    <div></div>
+                    <p>수지 환영</p>
+                </li>
+                <li>
+                    <div></div>
+                    <p>수지 환영</p>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div><!--메인영역-->
+<footer>
+    <ul class="nav">
+        <li>이용약관</li>
+        <li>개인정보보호방침</li>
+        <li>이메일무단수집거부</li>
+        <li>고객지원</li>
+        <li>권리침해신고</li>
+        <li>광고문의</li>
+    </ul>
+
+    <p>
+         Copyright &copy; 2021. imlsw96. All rights Reserved.
+        Designed by HTML5, CSS3<br>
+        1 Infinite Loop, Cupertino, CA 95014. 개인정보 관리책임자 : 스티브잡스 steve@apple.com
+    </p>
+</footer><!--푸터영역-->
+</div>
+</body>
+</html>
