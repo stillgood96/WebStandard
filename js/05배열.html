@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>배열</title>
+</head>
+<body>
+<h1>배열</h1>
+
+<script>
+    // 배열 : 여러개의 동일한 종류의 값들로 구성된 집합
+    //           각 값들은 위치값 index으로 참조가능
+    // 배열을 생성하는 3가지의 타입
+    // 변수명 = [값, 값, 값]
+    // 변수명 = Array(값, 값, 값)
+    // 변수명 = new Array(값, 값, 값)
+    let name =['이선우','지현','혜렌'];
+    let kors = Array(99,98,100);
+    let engs = new Array(100,100,100);
+    let mats = [100, 100, 100];
+
+    let tots= [0, 0, 0]
+    let avg=[0.0, 0.0, 0.0]
+    let grd =['가', '가', '가']
+
+/*    for(let n in name) {
+        document.write(name[n]+'/')
+    }
+    document.write('<br>')
+    for (let k in kors){
+        document.write(kors[k]+'  /')
+    }
+    document.write('<br>')
+    for (let e in engs){
+        document.write(engs[e]+'  /')
+    }
+    document.write('<br>')
+    for (let m in mats){
+        document.write(mats[m]+'  /')
+    }
+    document.write('<br>')
+
+    for(let t in tots){
+        tots[t]=engs[t]+kors[t]+mats[t]
+        document.write(tots[t]+'/')
+            avg[t]=tots[t]/3;
+            document.write(avg[t].toFixed(2)+'<br>')
+        let s=(avg[t]/10).toFixed(0)
+        switch (parseInt(s)){
+                case 10: case 9 : grd='수'; break;
+                case 8: grd='우'; break;
+                case 7: grd='미'; break;
+                case 6: grd='양'; break;
+                default: grd='가'; break;
+        }
+        document.write(grd[t]+'<p>')
+    }*/
+
+    //선생님 ver
+    for (let i =0; i<=2; ++i){
+        name[i];
+        tots[i]=kors[i] + engs[i] + mats[i];
+        avg[i]= tots[i]/3;
+
+        let x = parseInt(avg[i].toFixed(0)/10);
+        switch (x){
+            case 10: case 9 : grd[i]='수'; break;
+            case 8: grd[i]='우'; break;
+            case 7: grd[i]='미'; break;
+            case 6: grd[i]='양'; break;
+            default: grd[i]='가'; break;
+        }
+        document.write('<p>'+name[i]+'/'+kors[i]+'/'+engs[i]+'/'+mats[i]+'/'+tots[i]+'/'+avg[i].toFixed(1)+'/'+grd[i]+'</p>')
+    }
+
+    // 성적처리프로그램
+    //
+</script>
+
+</body>
+</html>
