@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>문서객체모델</title>
+        <style>
+        table { width:75% ;border: 1px solid black; margin:0 auto;border-collapse: collapse; ; margin-bottom: 50px;  table-layout: fixed}
+
+        th, td {border: 1px solid black; text-align: center; padding: 10px; }
+        td:nth-of-type(2){white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+        .newbtn{text-align: right; border-top: 1px solid white; border-left: 1px solid white; border-right: 1px solid white;}
+        .bdgnb {border-left: 1px solid white;border-right: 1px solid white;border-bottom: 1px solid white;}
+        .cpage { font-weight:bold; font-size: 30px; color:red;}
+        tbody a {font-weight: normal; }
+        tbody a:link {color:black; text-decoration: none;}
+        tbody a:hover {color: orange; }
+        tbody a:active {color: crimson;}
+        tbody a:visited {color: black;}
+    </style>
+</head>
+<body>
+<H1>문서객체모델</H1>
+<div id="div1"></div>
+<div class="div2"></div>
+<div name="div3"></div>
+<div></div>
+<p></p>
+
+
+<script>
+    let div1 = document.getElementById('div1');                     //id로 요소 지정한 div
+    let div2 = document.getElementsByClassName('div2');     // 클래스명으로 지정한 div
+    let div3 = document.getElementsByName('div3');              //Name으로 검색
+    let divs = document.getElementsByTagName('div')             // 태그명으로 검색
+
+    let p1 = document.querySelector('p');                                     // CSS선택자로 검색   get어저구저쩌구 종합모음버전
+    let p2 = document.querySelectorAll('p');                                // CSS선택자로 검색 - 결과는 복수
+    let div4 =document.querySelector('#div1');                          // CSS
+    let div5 =document.querySelector('.div1');                          // CSS
+
+    div1.innerHTML = 'Hello, World!!'
+    div2[0].innerHTML ='겁나게 졸려 쉬즈파인~쉬파~'    // getElements s s s 복수는 배열의상태로 가져오기 때문에 배열첨자를써주어야한다.
+    div3[0].innerHTML = '한번더, Hello, World!!'
+    divs[3].innerHTML='시간은 금이라구, 친구!!' // 모든 DIV태그들이 넘어오는데 비어있는 DIV가 4번째라서 3이라해놓고 한다.
+
+    p1.innerHTML = '거어어업나~~~아아아 ~~~ 졸려부러요 오늘 3시간 30분잤다네요 실화입니까 ?'
+
+    p2[0].innerHTML = '오에에엑 우에에엑 구와아아아악'
+
+    div1.style.color ='red'
+    div1.style.fontWeight ='bold'
+
+    // div2 이탤릭
+    div2[0].style.fontStyle='italic'
+    // div3 밑줄, 녹색 글자색
+    div3[0].style.textDecoration='underline'
+    div3[0].style.color='green'
+    // 4번째 div 궁서체
+    divs[3].style.fontFamily='궁서체'
+    // p1 노랑색 배경색
+    p1.style.background='year';
+</script>
+
+<script>
+    // 문서제목에 현재시간을 표시하는
+    // DOM 스크립트 작성
+    // 단, 현재시간을 표시하는 함수는 today라 정함
+    let title = document.getElementsByTagName('title')
+    let date= new Date();
+    function today () {
+        let year=date.getFullYear()+'년'
+        let month =(date.getMonth()+1)+'월'
+        let day = date.getDay()+'일'
+        let hours= date.getHours()+'시'
+        let minutes= date.getMinutes()+'분'
+        let seconds= date.getSeconds()+'초'
+
+        let td = year+month+day+hours+minutes+seconds
+
+        return td;
+    }
+    let time= '문서객체모델 [' + today() + "]";
+    title[0].innerHTML=time;
+</script>
+
+<h2>이미지 조작하기</h2>
+<div><button type="button" id="showbtn">이미지 나와랏!</button>
+<button type="button" id="hidebtn">이미지 사라져랏!</button></div>
+<div id="imgdiv"></div>
+
+<script>
+    let showbtn = document.getElementById('showbtn')
+    let hidebtn = document.getElementById('hidebtn')
+    let imgdiv = document.getElementById('imgdiv')
+
+    showbtn.addEventListener('click', showimg);
+    hidebtn.addEventListener('click', hideimg);
+
+    // 버튼 클릭시 띄울 이미지들을 배열로 정의
+    let images =['Marshal.png','curly.png','AC_Isabelle.png',]
+
+    function showimg() {
+            // img요소, src 속성을 생성
+        let img = document.createElement('img');
+        let src = document.createAttribute('src');
+
+        // src 속성에 이미지경로 저장후 img 요소에 설정
+       // src.value = '../img/Marshal.png'
+        let idx = parseInt(Math.random()* (3-0) )
+        src.value = '../img/'+images[idx]
+        img.setAttributeNode(src);
+
+        // div요소에 img 요소 추가
+        imgdiv.appendChild(img)
+    }
+    function hideimg () {
+        // imgdiv의 마지막 자식요소 선택
+        // let img = imgdiv.lastChild;
+
+        // imgdiv의 첫번째 자식요소 선택
+        let img= imgdiv.firstChild;
+
+        // 선택한 부모요소의 자식요소 제거
+        imgdiv.removeChild(img);
+
+
+    }
+</script>
+
+
+<h2>동적으로 테이블 생성하기 1</h2>
+<h2>게시판</h2>
+
+<table>
+    <colgroup> <!-- 테이블 컬럼 너비 정의 -->
+        <col style="width:10%">
+        <col>
+        <col style="width:15%">
+        <col style="width:15%">
+        <col style="width:10%">
+    </colgroup>
+
+    <thead>
+    <tr>
+        <th>번호</th><th>제목</th><th>작성자</th><th>작성일</th><th>조회</th>
+    </tr>
+    </thead>
+    <tbody>
+    <div id="literal">
+        <script>
+            for(let i=1; i<=15; i++) {
+                document.write("<tr><td>"+i+"</td><td><a href='#'>시간은 금이라구, 친구! 진짜라구</a></td><td>imlsw96</td><td>2020-12-23</td><td>777</td></tr>")
+            }
+        </script>
+        <tr><td colspan="5" class="bdgnb"><p>◁◀◀<span class="cpage">1</span> 2 3 4 5 6 7 8 9 10 ▶▶▷</p></td></tr>
+    </div>
+    </tbody>
+</table>
+<script></script>
+
+
+<h2>동적으로 테이블 생성하기 2</h2>
+<table id="board"></table>
+<script>
+    // table-> tbody -> tr -> th/td -> 순으로 요소 생성
+    // 텍스트 -> th/td -> tr -> tbody -> table 순으로 자식요소로 추가
+    let table = document.getElementById('board')
+    let tbody= document.createElement('tbody');
+
+    // 제목행 생성
+    let tr= document.createElement('tr');
+    let th1 = document.createElement('th'); // 번호
+    let th2= document.createElement('th'); // 제목
+    let th3 = document.createElement('th'); // 작성자
+    let th4= document.createElement('th'); // 작성일
+    let th5 = document.createElement('th'); // 조회수
+
+
+
+    // 제목행에 작성할 텍스트 생성
+    let txt1 = document.createTextNode('번호');
+    let txt2 = document.createTextNode('제목');
+    let txt3 = document.createTextNode('작성자');
+    let txt4 = document.createTextNode('작성일');
+    let txt5 = document.createTextNode('조회수');
+
+
+
+    // 생성한 텍스트를 제목열에 자식요소로 추가.
+    th1.appendChild(txt1);
+    th2.appendChild(txt2);
+    th3.appendChild(txt3);
+    th4.appendChild(txt4);
+    th5.appendChild(txt5);
+
+
+    // 생성한 제목열들을 제목행에 자식요소로 추가
+    tr.appendChild(th1);
+    tr.appendChild(th2);
+    tr.appendChild(th3);
+    tr.appendChild(th4);
+    tr.appendChild(th5);
+
+    // 생성한 제목행을 tbody에 자식요소로 추가
+    tbody.appendChild(tr);
+
+
+
+    // 생성한 tbody를 테이블의 자식요소로 추가
+    table.appendChild(tbody)
+
+</script>
+
+</body>
+</html>
+<!--
+DOM : document object model
+html/xml 문서의 각 요소에 접근하기 위해 만들어둔 객체들의 모임
+
+DOM을 이용해서 문서 내 모든 요소를 접근하고 조작할 수 있음
+즉, 기존 문서에 새로운 요소를 추가/수정/삭제할 수 있고
+기존 요소를 수정/삭제할 수 있으며 스타일 역시 추가/수정/삭제할 수 있음
+
+브라우저로 웹문서를 읽으면 분석parsing과정을 거쳐 자동으로 생성됨
+
+DOM 중에서 document 개체는 문서 자체를 의미
+즉, 웹문서내 특정요소에 접근하려면 반드시
+document 개체를 통해야만 함.
+한편, document객체를 통해 문서의 특정요소를 선택하려면
+getElementById, getQuerySelector ,
+getElementsByTagName, getElementsByClassName,
+getElemetnsByName, querySelectAll 등의 함수를 이용해야 함.
+// #s 가 붙는 녀석들은 배열형태의 첨자를 가져와야 한다.
+
+DOM을 이용해서 선택한 html요소의 내용이나 속성을 변경하려면
+'요소명.innerHTML'이나 또는 '요소명.속성명'을 이용하면 된다.
+또한, 선택한 html요소의 스타일을 변경하려면
+요소명.style.스타일속성을 사용하면 된다.
+-->
+
+<!--
+DOM을 이용해서 문서에 새로운 요소나 속성을 추가하려면
+createElement, createAttribute,
+createTextNode, appendChild, removeChild, setAttribute등의 함수 이용
+
+-->
+
+<!--
+  kapt.go.kr
+-->
