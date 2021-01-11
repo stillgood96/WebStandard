@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <title>폼</title>
+</head>
+<body>
+<h1>폼</h1>
+<h2>간단한 폼 : form-group, form-control을 반드시 쓰자 </h2>
+<form>
+    <!-- 반드시 폼그룹을 만들어 주어야 폼 사용 가능 -->
+    <div class="form-group">
+        <label for="email">이메일주소</label>
+        <input type="text" id="email" class="form-control">
+        <small class="text-muted form-text">이메일 주소는 올바르게 쓰세요.</small>
+    </div>
+    <div class="form-group">
+        <label for="pwd">비밀번호</label>
+        <input type="password" id="pwd" class="form-control">
+        <small class="text-muted form-text">비밀번호 똑디 써라~</small>
+    </div>
+    <div class="form-group form-check">
+        <input type="checkbox" id="check1" class="form-check-input">
+        <label class="form-check-label">자동로그인</label>
+    </div>
+    <button type="button" class="btn btn-primary">로그인</button>
+</form>
+
+<hr>
+<h2>수평배치 폼 : form-group row</h2>
+<form>
+    <div class="form-group row">
+        <label for="userid" class="col-form-labe col-sm-2">아이디</label>
+        <div class="col-sm-5"> <!--방법1 -->
+        <input type="text" id="userid" class="form-control ">
+        </div>
+    </div>
+    <div class="form-group row">
+        <label for="userpwd" class="col-form-label col-sm-2">비밀번호</label>
+        <!--방법2  방법1과의 가로길이가 다름 선생님 추천방법 공식홈피에서는 방법1로 나옴.-->
+        <input tpye="password" id="userpwd" class="form-control col-sm-5">
+    </div>
+</form>
+
+<hr>
+<h2>수평배치 폼 : form-inline</h2>
+<form class="form-inline">
+    <div class="form-group col-5">
+    <label for="userid2" class="col-form-label ">아이디</label>
+    <input tpye="text" id="userid2" class="form-control">
+    </div>
+    <div class="form-group col-5">
+        <label for="pwd2" class="col-form-label ">비밀번호</label>
+        <input tpye="password" id="pwd2" class="form-control">
+    </div>
+</form>
+
+<hr>
+<h2>체크박스 수평배치 : form-check-inline </h2>
+<form>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+        <label class="form-check-label" for="inlineCheckbox1">1</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+        <label class="form-check-label" for="inlineCheckbox2">2</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
+        <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
+    </div>
+</form>
+
+<hr>
+<h2>라디오버튼 수평배치 form-check-inline : </h2>
+<form>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+        <label class="form-check-label" for="inlineRadio1">1</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+        <label class="form-check-label" for="inlineRadio2">2</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" disabled>
+        <label class="form-check-label" for="inlineRadio3">3 (disabled)</label>
+    </div>
+</form>
+
+
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
